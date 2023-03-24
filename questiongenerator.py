@@ -426,4 +426,13 @@ def print_qa(qa_list: List[Mapping[str, str]], show_answers: bool = True) -> Non
         # print full sentence answers
         else:
             if show_answers:
-                print(f"{space}A: {answer}\n")
+                print(f"{space}A: {answer}\n"
+
+def save_qa(qa_list: List[Mapping[str, str]], show_answers: bool = True) -> None:
+"""Formats and prints a list of generated questions and answers."""
+    pairs = []
+    for i in range(len(qa_list)):
+        question = qa_list[i]['question']
+        answer = qa_list[i]["answer"]
+        with open("QA.txt", 'a', errors='ignore') as f:
+          f.write(question+","+answer)
