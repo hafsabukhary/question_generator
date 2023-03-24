@@ -428,9 +428,9 @@ def print_qa(qa_list: List[Mapping[str, str]], show_answers: bool = True) -> Non
             if show_answers:
                 print(f"{space}A: {answer}\n"
 
+                
 def save_qa(qa_list: List[Mapping[str, str]], show_answers: bool = True) -> None:
-"""Formats and prints a list of generated questions and answers."""
-    pairs = []
+    """Formats and prints a list of generated questions and answers."""
     for i in range(len(qa_list)):
         question = qa_list[i]['question']
         answer = qa_list[i]["answer"]
